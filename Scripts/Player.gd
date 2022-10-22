@@ -15,7 +15,7 @@ var motion = Vector2()
 
 func _physics_process(delta):
 	
-	motion.y += gravity 
+	motion.y += gravity
 	var friction = false
 	
 	if Input.is_action_pressed("ui_right"):

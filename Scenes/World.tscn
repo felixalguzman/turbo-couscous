@@ -1,15 +1,25 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Rocky Roads/tileset forest.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Rocky Roads/background1.png" type="Texture" id=3]
 [ext_resource path="res://Rocky Roads/water_8frames.png" type="Texture" id=4]
 [ext_resource path="res://Rocky Roads/clouds.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
@@ -195,6 +205,78 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 9/shape_one_way_margin = 0.0
 9/shapes = [  ]
 9/z_index = 0
+10/name = "tileset forest.png 10"
+10/texture = ExtResource( 1 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 32, 32, 16, 16 )
+10/tile_mode = 1
+10/autotile/bitmask_mode = 0
+10/autotile/bitmask_flags = [  ]
+10/autotile/icon_coordinate = Vector2( 0, 0 )
+10/autotile/tile_size = Vector2( 16, 16 )
+10/autotile/spacing = 0
+10/autotile/occluder_map = [  ]
+10/autotile/navpoly_map = [  ]
+10/autotile/priority_map = [  ]
+10/autotile/z_index_map = [  ]
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape = SubResource( 5 )
+10/shape_one_way = false
+10/shape_one_way_margin = 1.0
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+10/z_index = 0
+11/name = "tileset forest.png 11"
+11/texture = ExtResource( 1 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 80, 32, 16, 16 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape = SubResource( 6 )
+11/shape_one_way = false
+11/shape_one_way_margin = 1.0
+11/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+11/z_index = 0
+12/name = "tileset forest.png 12"
+12/texture = ExtResource( 1 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 64, 48, 16, 16 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape = SubResource( 7 )
+12/shape_one_way = false
+12/shape_one_way_margin = 1.0
+12/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+12/z_index = 0
 
 [node name="World" type="Node2D"]
 
@@ -213,7 +295,7 @@ texture = ExtResource( 3 )
 tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -327686, 6, 0, -393213, 8, 0, -196617, 6, 0, -196611, 8, 0, -262143, 6, 0, -131066, 4, 0, -11, 4, 0, -65534, 4, 0, 65524, 0, 0, 65525, 0, 0, 65526, 9, 0, 65527, 9, 0, 65528, 9, 0, 65529, 9, 0, 65530, 9, 0, 65531, 9, 0, 65532, 9, 0, 2, 1, 0, 3, 9, 0, 4, 9, 0, 5, 9, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 131060, 3, 0, 131061, 3, 0, 131062, 3, 0, 131063, 3, 0, 131064, 3, 0, 131065, 3, 0, 131066, 3, 0, 131067, 3, 0, 131068, 2, 0, 131069, 9, 0, 131071, 0, 0, 65538, 2, 0, 65539, 3, 0, 65540, 3, 0, 65541, 3, 0, 65542, 4, 0, 65543, 2, 0, 196596, 3, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0, 196600, 3, 0, 196601, 3, 0, 196602, 3, 0, 196603, 3, 0, 196604, 2, 0, 196605, 3, 0, 196606, 4, 0, 131072, 4, 0, 131073, 4, 0, 131074, 2, 0, 131075, 3, 0, 131076, 3, 0, 131077, 3, 0, 131078, 2, 0, 262132, 3, 0, 262133, 3, 0, 262134, 3, 0, 262135, 3, 0, 262136, 3, 0, 262137, 3, 0, 262138, 3, 0, 262139, 3, 0, 262140, 2, 0, 262141, 3, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 2, 0, 196611, 3, 0, 196612, 3, 0, 196613, 3, 0 )
+tile_data = PoolIntArray( -327686, 6, 0, -393213, 8, 0, -196617, 6, 0, -196611, 8, 0, -262143, 6, 0, -131066, 4, 0, -11, 4, 0, -65534, 4, 0, 65524, 0, 0, 65525, 0, 0, 65526, 9, 0, 65527, 9, 0, 65528, 9, 0, 65529, 9, 0, 65530, 9, 0, 65531, 9, 0, 65532, 9, 0, 2, 1, 0, 3, 9, 0, 4, 9, 0, 5, 9, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 131060, 3, 0, 131061, 12, 0, 131062, 12, 0, 131063, 12, 0, 131064, 12, 0, 131065, 12, 0, 131066, 12, 0, 131067, 12, 0, 131068, 2, 0, 131069, 9, 0, 131071, 0, 0, 65538, 2, 0, 65539, 3, 0, 65540, 12, 0, 65541, 12, 0, 65542, 4, 0, 65543, 2, 0, 196596, 3, 0, 196597, 3, 0, 196598, 3, 0, 196599, 12, 0, 196600, 3, 0, 196601, 3, 0, 196602, 3, 0, 196603, 3, 0, 196604, 2, 0, 196605, 12, 0, 131072, 4, 0, 131074, 2, 0, 131075, 12, 0, 131076, 12, 0, 131077, 3, 0, 131078, 2, 0, 262132, 3, 0, 262133, 3, 0, 262134, 3, 0, 262135, 3, 0, 262136, 3, 0, 262137, 3, 0, 262138, 3, 0, 262139, 3, 0, 262140, 2, 0, 262141, 12, 0, 262142, 12, 0, 262143, 12, 0, 196608, 12, 0, 196609, 12, 0, 196610, 2, 0, 196611, 3, 0, 196612, 3, 0, 196613, 3, 0 )
 
 [node name="TileMap2" type="TileMap" parent="."]
 z_index = -1
@@ -222,7 +304,7 @@ cell_size = Vector2( 16, 16 )
 collision_layer = 2
 navigation_layers = 2
 format = 1
-tile_data = PoolIntArray( -262154, 6, 0, -327678, 6, 0, -196614, 6, 0, -196609, 6, 0, -131066, 4, 0, -11, 4, 0, -7, 4, 0, -5, 4, 0, -4, 4, 0, -3, 4, 0, -65534, 4, 0, 65524, 0, 0, 65525, 0, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 131060, 3, 0, 131061, 3, 0, 131062, 3, 0, 131063, 3, 0, 131064, 3, 0, 131065, 3, 0, 131066, 3, 0, 131067, 3, 0, 131068, 3, 0, 131069, 5, 0, 131070, 5, 0, 131071, 5, 0, 65536, 5, 0, 65537, 5, 0, 65538, 3, 0, 65539, 3, 0, 65540, 3, 0, 65541, 3, 0, 65542, 4, 0, 65543, 2, 0, 196596, 3, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0, 196600, 3, 0, 196601, 3, 0, 196602, 3, 0, 196603, 3, 0, 196604, 3, 0, 196605, 5, 0, 196606, 5, 0, 196607, 5, 0, 131072, 5, 0, 131073, 5, 0, 131074, 3, 0, 131075, 3, 0, 131076, 3, 0, 131077, 3, 0, 131078, 2, 0, 262132, 3, 0, 262133, 3, 0, 262134, 3, 0, 262135, 3, 0, 262136, 3, 0, 262137, 3, 0, 262138, 3, 0, 262139, 3, 0, 262140, 3, 0, 262141, 3, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 3, 0, 196611, 3, 0, 196612, 3, 0, 196613, 3, 0 )
+tile_data = PoolIntArray( -262154, 6, 0, -327678, 6, 0, -196614, 6, 0, -196609, 6, 0, -11, 4, 0, -7, 4, 0, -4, 4, 0, -65534, 4, 0, 65524, 0, 0, 65525, 0, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 131060, 3, 0, 131061, 3, 0, 131062, 3, 0, 131063, 3, 0, 131064, 3, 0, 131065, 3, 0, 131066, 3, 0, 131067, 3, 0, 131068, 3, 0, 131069, 5, 0, 131070, 5, 0, 131071, 5, 0, 65536, 5, 0, 65537, 5, 0, 65538, 3, 0, 65539, 3, 0, 65540, 3, 0, 65541, 3, 0, 65542, 4, 0, 65543, 2, 0, 196596, 3, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0, 196600, 3, 0, 196601, 3, 0, 196602, 3, 0, 196603, 3, 0, 196604, 3, 0, 196605, 5, 0, 196606, 5, 0, 196607, 5, 0, 131072, 5, 0, 131073, 5, 0, 131074, 3, 0, 131075, 3, 0, 131076, 3, 0, 131077, 3, 0, 131078, 2, 0, 262132, 3, 0, 262133, 3, 0, 262134, 3, 0, 262135, 3, 0, 262136, 3, 0, 262137, 3, 0, 262138, 3, 0, 262139, 3, 0, 262140, 3, 0, 262141, 3, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 3, 0, 196611, 3, 0, 196612, 3, 0, 196613, 3, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -53, -16 )
@@ -231,3 +313,6 @@ zoom = Vector2( 0.25, 0.25 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( -89, -87 )
+
+[node name="Coin" parent="." instance=ExtResource( 6 )]
+position = Vector2( -118, -9 )
